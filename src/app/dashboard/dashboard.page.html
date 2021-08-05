@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-fab vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goToAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-grid>
+    <!-- List of Text Items -->
+    <ion-list>
+      <ion-item *ngFor="let item of items | async">
+
+          <ion-label (click)="goToMap()">
+
+            <h2>{{item.nom}} de {{item.ville}}</h2>
+            <h3>lat: {{item.latitude}} lon: {{item.longitude}}</h3>
+          </ion-label>
+
+
+
+
+      </ion-item>
+
+    </ion-list>
+  </ion-grid>
+  <section>
+      <ion-button expand="block" (click)="goToMap()">
+        <ion-icon name="map"></ion-icon>
+        Map
+      </ion-button>
+  </section>
+</ion-content>
