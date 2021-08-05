@@ -1,5 +1,7 @@
 {
   "name": "patrimoine1",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
